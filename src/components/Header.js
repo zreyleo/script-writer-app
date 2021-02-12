@@ -1,18 +1,23 @@
 import { useContext } from 'react';
 
-import { container } from '../styles';
-import ChangeThemeButton from './ChangeThemeButton';
 import ScriptActions from './ScriptActions';
 
 import GlobalStateContext from '../GlobalState/context';
 
+import HeaderTitle from './HeaderTitle';
+import { darkThemeHF, lightThemeHF } from '../styles';
+
 const Header = () => {
-    const { theme } = useContext(GlobalStateContext);
+    const { turnOnDarkTheme } = useContext(GlobalStateContext);
 
     return (
-        <header className={`Header ${theme}`}>
-            <div className={`${container()} h-full grid grid-rows-2`}>
-                <ChangeThemeButton />
+        <header
+            className={`Header ${
+                turnOnDarkTheme ? darkThemeHF() : lightThemeHF()
+            }`}
+        >
+            <div className={`h-full grid grid-rows-3`}>
+                <HeaderTitle />
                 <ScriptActions />
             </div>
         </header>

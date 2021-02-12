@@ -4,11 +4,17 @@ import { useContext } from 'react';
 
 import GlobalStateContext from '../GlobalState/context';
 
+import { darkThemeHF, lightThemeHF } from '../styles';
+
 const Footer = () => {
-    const { theme } = useContext(GlobalStateContext);
+    const { turnOnDarkTheme } = useContext(GlobalStateContext);
 
     return (
-        <footer className={`${theme} p-4 text-center`}>
+        <footer
+            className={`${
+                turnOnDarkTheme ? darkThemeHF() : lightThemeHF()
+            } p-4 text-center`}
+        >
             Regynald Zambrano
         </footer>
     );

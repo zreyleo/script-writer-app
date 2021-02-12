@@ -1,16 +1,12 @@
 import { useContext, useReducer, useState } from 'react';
 
-import { darkTheme, lightTheme } from '../styles';
+import { darkThemeHF, lightThemeHF } from '../styles';
 import { CHANGE_THEME } from './actions';
 
 import GlobalStateContext from './context';
 import reducer from './reducer';
 
 const initialState = {
-    themes: {
-        light: lightTheme(),
-        dark: darkTheme(),
-    },
     turnOnDarkTheme: true,
 };
 
@@ -26,9 +22,6 @@ const GlobalState = (props) => {
     return (
         <GlobalStateContext.Provider
             value={{
-                theme: state.turnOnDarkTheme
-                    ? state.themes.dark
-                    : state.themes.light,
                 turnOnDarkTheme: state.turnOnDarkTheme,
                 changeTheme,
             }}

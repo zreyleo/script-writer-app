@@ -1,7 +1,11 @@
+import { useContext } from 'react';
+
+import GlobalStateContext from '../GlobalState/context';
+
 const ScriptActions = () => {
-    return (
-        <div className="bg-gray-500 h-full">ScriptActions</div>
-    );
-}
- 
+    const { theme } = useContext(GlobalStateContext);
+
+    return <div className={`${theme}`}>ScriptActions</div>;
+};
+
 export default ScriptActions;
