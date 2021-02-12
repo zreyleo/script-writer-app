@@ -4,5 +4,5 @@
 @tailwind utilities;
 
 .Header {
-  height: 75px;
+    height: 100px;
 }
