@@ -1,8 +1,14 @@
 import { darkTheme } from '../styles';
 
+import { useContext } from 'react';
+
+import GlobalStateContext from '../GlobalState/context';
+
 const Footer = () => {
+    const { theme } = useContext(GlobalStateContext);
+
     return (
-        <footer className={`${darkTheme()} p-4 text-center`}>
+        <footer className={`${theme} p-4 text-center`}>
             Regynald Zambrano
         </footer>
     );
