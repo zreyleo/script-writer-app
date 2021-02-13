@@ -7,9 +7,9 @@ import Header from './components/Header';
 function App() {
     return (
         <GlobalState>
-            <div className="App min-h-screen flex flex-col">
+            <div className="App h-screen flex flex-col">
                 <Header />
-                <div className="flex-grow flex flex-col">
+                <div className="flex-grow grid grid-cols-5">
                     <ApplicationContainer />
                 </div>
                 <Footer />
