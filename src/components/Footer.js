@@ -7,12 +7,12 @@ import GlobalStateContext from '../GlobalState/context';
 import { darkThemeHF, lightThemeHF } from '../styles';
 
 const Footer = () => {
-    const { turnOnDarkTheme } = useContext(GlobalStateContext);
+    const { turnOnDarkMode } = useContext(GlobalStateContext);
 
     return (
         <footer
             className={`${
-                turnOnDarkTheme ? darkThemeHF() : lightThemeHF()
+                turnOnDarkMode ? darkThemeHF() : lightThemeHF()
             } p-4 text-center`}
         >
             Regynald Zambrano

@@ -8,12 +8,12 @@ import HeaderTitle from './HeaderTitle';
 import { darkThemeHF, lightThemeHF } from '../styles';
 
 const Header = () => {
-    const { turnOnDarkTheme } = useContext(GlobalStateContext);
+    const { turnOnDarkMode } = useContext(GlobalStateContext);
 
     return (
         <header
             className={`Header ${
-                turnOnDarkTheme ? darkThemeHF() : lightThemeHF()
+                turnOnDarkMode ? darkThemeHF() : lightThemeHF()
             }`}
         >
             <div className={`h-full grid grid-rows-3`}>

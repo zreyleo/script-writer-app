@@ -5,7 +5,7 @@ const reducer = (state, action) => {
         case CHANGE_THEME:
             return {
                 ...state,
-                turnOnDarkTheme: !state.turnOnDarkTheme,
+                turnOnDarkMode: !state.turnOnDarkMode,
             };
 
         default:

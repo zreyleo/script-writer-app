@@ -7,7 +7,7 @@ import GlobalStateContext from './context';
 import reducer from './reducer';
 
 const initialState = {
-    turnOnDarkTheme: true,
+    turnOnDarkMode: true,
 };
 
 const GlobalState = (props) => {
@@ -22,7 +22,7 @@ const GlobalState = (props) => {
     return (
         <GlobalStateContext.Provider
             value={{
-                turnOnDarkTheme: state.turnOnDarkTheme,
+                turnOnDarkMode: state.turnOnDarkMode,
                 changeTheme,
             }}
         >

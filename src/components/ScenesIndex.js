@@ -5,12 +5,12 @@ import GlobalStateContext from '../GlobalState/context';
 import { darkThemeIndexes, lightThemeIndexes } from '../styles';
 
 const ScenesIndex = () => {
-    const { turnOnDarkTheme } = useContext(GlobalStateContext);
+    const { turnOnDarkMode } = useContext(GlobalStateContext);
 
     return (
         <div
             className={`${
-                turnOnDarkTheme ? darkThemeIndexes() : lightThemeIndexes()
+                turnOnDarkMode ? darkThemeIndexes() : lightThemeIndexes()
             }`}
         >
             <button>New Scene</button>

@@ -5,12 +5,12 @@ import GlobalStateContext from '../GlobalState/context';
 import { darkThemeIndexes, lightThemeIndexes } from '../styles';
 
 const CharactersIndex = () => {
-    const { turnOnDarkTheme } = useContext(GlobalStateContext);
+    const { turnOnDarkMode } = useContext(GlobalStateContext);
 
     return (
         <div
             className={`${
-                turnOnDarkTheme ? darkThemeIndexes() : lightThemeIndexes()
+                turnOnDarkMode ? darkThemeIndexes() : lightThemeIndexes()
             }`}
         >
             CharactersIndex
