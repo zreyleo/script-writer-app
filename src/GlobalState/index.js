@@ -29,21 +29,21 @@ const GlobalState = (props) => {
         </GlobalStateContext.Provider>
     )
 
-    // return (
-    //     <GlobalStateContext.Provider
-    //         value={{
-    //             turnOnDarkMode: state.turnOnDarkMode,
-    //             changeTheme,
-    //         }}
-    //     >
-    //         {props.children}
-    //     </GlobalStateContext.Provider>
-    // );
+    return (
+        <GlobalStateContext.Provider
+            value={{
+                turnOnDarkMode: state.turnOnDarkMode,
+                changeTheme,
+            }}
+        >
+            {props.children}
+        </GlobalStateContext.Provider>
+    );
 
-    return {
-        state,
-        GlobalStateProvider
-    }
+    // return {
+    //     state,
+    //     GlobalStateProvider
+    // }
 };
 
 export default GlobalState;
