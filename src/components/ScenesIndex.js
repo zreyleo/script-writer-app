@@ -1,18 +1,8 @@
-import { useContext } from 'react';
-
-import GlobalStateContext from '../GlobalState/context';
-
-import { darkThemeIndexes, lightThemeIndexes } from '../styles';
+import { THEME_CONTRAST } from '../styles';
 
 const ScenesIndex = () => {
-    const { turnOnDarkMode } = useContext(GlobalStateContext);
-
     return (
-        <div
-            className={`${
-                turnOnDarkMode ? darkThemeIndexes() : lightThemeIndexes()
-            }`}
-        >
+        <div className={`${THEME_CONTRAST}`}>
             <button>New Scene</button>
         </div>
     );

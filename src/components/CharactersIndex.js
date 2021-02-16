@@ -1,21 +1,7 @@
-import { useContext } from 'react';
-
-import GlobalStateContext from '../GlobalState/context';
-
-import { darkThemeIndexes, lightThemeIndexes } from '../styles';
+import { THEME_CONTRAST } from '../styles';
 
 const CharactersIndex = () => {
-    const { turnOnDarkMode } = useContext(GlobalStateContext);
-
-    return (
-        <div
-            className={`${
-                turnOnDarkMode ? darkThemeIndexes() : lightThemeIndexes()
-            }`}
-        >
-            CharactersIndex
-        </div>
-    );
+    return <div className={`${THEME_CONTRAST}`}>CharactersIndex</div>;
 };
 
 export default CharactersIndex;
