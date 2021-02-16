@@ -1,6 +1,8 @@
+import { TEXTEDITOR_SCENE_ACTION_STYLE } from './style';
+
 const SceneAction = () => {
     return (
-        <textarea className="col-span-6 p-3 resize-none border-red-900"></textarea>
+        <textarea className={`${TEXTEDITOR_SCENE_ACTION_STYLE}`}></textarea>
     );
 }
  

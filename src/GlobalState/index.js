@@ -1,6 +1,5 @@
-import { useContext, useReducer, useState } from 'react';
+import { useReducer } from 'react';
 
-import { darkThemeHF, lightThemeHF } from '../styles';
 import { CHANGE_THEME } from './actions';
 
 import GlobalStateContext from './context';
@@ -19,7 +18,7 @@ const GlobalState = (props) => {
         });
     };
 
-    return (
+    const GlobalStateProvider = (props) => (
         <GlobalStateContext.Provider
             value={{
                 turnOnDarkMode: state.turnOnDarkMode,
@@ -28,7 +27,23 @@ const GlobalState = (props) => {
         >
             {props.children}
         </GlobalStateContext.Provider>
-    );
+    )
+
+    // return (
+    //     <GlobalStateContext.Provider
+    //         value={{
+    //             turnOnDarkMode: state.turnOnDarkMode,
+    //             changeTheme,
+    //         }}
+    //     >
+    //         {props.children}
+    //     </GlobalStateContext.Provider>
+    // );
+
+    return {
+        state,
+        GlobalStateProvider
+    }
 };
 
 export default GlobalState;

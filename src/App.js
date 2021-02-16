@@ -5,16 +5,18 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 
 function App() {
+    const { state: { turnOnDarkMode }, GlobalStateProvider } = GlobalState()
+
     return (
-        <GlobalState>
-            <div className="App h-screen flex flex-col">
+        <GlobalStateProvider>
+            <div className={`App h-screen flex flex-col ${turnOnDarkMode && 'dark'}`}>
                 <Header />
                 <div className="flex-grow grid grid-cols-5">
                     <ApplicationContainer />
                 </div>
                 <Footer />
             </div>
-        </GlobalState>
+        </GlobalStateProvider>
     );
 }
 
