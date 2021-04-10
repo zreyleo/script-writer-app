@@ -9,7 +9,7 @@ import {
 
 import './style.css';
 
-const NewCharacterForm = () => {
+const NewCharacterForm = ({ setForm }) => {
     return (
         <form className="NewCharacterForm h-full grid grid-cols-6 gap-4">
             <label className={NEW_CHARACTER_FORM_LABELS}>
@@ -26,7 +26,7 @@ const NewCharacterForm = () => {
                     className={`${TEXTEDITOR_SCENE_ACTION_STYLE}`}
                 ></textarea>
             </label>
-            <CancelButton />
+            <CancelButton setForm={setForm} />
             <input
                 className={`${TEXTEDITOR_INPUT_SUBMIT_STYLE}`}
                 value="SAVE CHARACTER"

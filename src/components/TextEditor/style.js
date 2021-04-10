@@ -1,14 +1,14 @@
 const TEXTEDITOR_COMMON_STYLES = `
-    rounded border-2 border-blue-300  dark:text-white
+    dark:text-white dark:bg-gray-900
 `;
 
-const TEXTEDITOR_FORM_FIELDS_STYLES = `${TEXTEDITOR_COMMON_STYLES} dark:bg-gray-900`;
+const TEXTEDITOR_FORM_FIELDS_STYLES = `${TEXTEDITOR_COMMON_STYLES} rounded border-2 border-blue-300 `;
 
 export const TEXTEDITOR_SLUGLINE_STYLE = `${TEXTEDITOR_FORM_FIELDS_STYLES} px-3 uppercase`;
 
 export const TEXTEDITOR_SCENE_ACTION_STYLE = `${TEXTEDITOR_FORM_FIELDS_STYLES} p-3 col-span-6 resize-none`;
 
-export const BUTTON_NEW_CHARACTER_DIALOG = `${TEXTEDITOR_COMMON_STYLES} col-span-2`;
+export const BUTTON_NEW_CHARACTER_DIALOG = `${TEXTEDITOR_FORM_FIELDS_STYLES} col-span-2`;
 
 export const TEXTEDITOR_INPUT_SUBMIT_STYLE = `
     rounded border-2 

@@ -1,49 +1,39 @@
 import { useReducer } from 'react';
 
-import { CHANGE_THEME } from './actions';
+import { CHANGE_THEME, SAVE_SCENE } from './actions';
 
 import GlobalStateContext from './context';
 import reducer from './reducer';
 
-const initialState = {
-    turnOnDarkMode: true,
-};
+import initialState from './initialState';
 
 const GlobalState = (props) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     const changeTheme = () => {
         dispatch({
-            type: CHANGE_THEME,
+            type: CHANGE_THEME
         });
     };
 
-    const GlobalStateProvider = (props) => (
-        <GlobalStateContext.Provider
-            value={{
-                turnOnDarkMode: state.turnOnDarkMode,
-                changeTheme,
-            }}
-        >
-            {props.children}
-        </GlobalStateContext.Provider>
-    )
+    const saveScene = (scene) => {
+        dispatch({
+            type: SAVE_SCENE,
+            payload: { scene }
+        });
+    };
 
     return (
         <GlobalStateContext.Provider
             value={{
                 turnOnDarkMode: state.turnOnDarkMode,
                 changeTheme,
+                saveScene
             }}
         >
             {props.children}
         </GlobalStateContext.Provider>
     );
-
-    // return {
-    //     state,
-    //     GlobalStateProvider
-    // }
 };
 
 export default GlobalState;
