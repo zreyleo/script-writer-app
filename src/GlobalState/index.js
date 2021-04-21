@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 
-import { CHANGE_THEME, SAVE_SCENE } from './actions';
+import { ADD_CHARACTER, CHANGE_THEME, SAVE_SCENE } from './actions';
 
 import GlobalStateContext from './context';
 import reducer from './reducer';
@@ -23,12 +23,20 @@ const GlobalState = (props) => {
         });
     };
 
+    const addCharacter = (character) => {
+        dispatch({
+            type: ADD_CHARACTER,
+            payload: { character }
+        });
+    };
+
     return (
         <GlobalStateContext.Provider
             value={{
                 turnOnDarkMode: state.turnOnDarkMode,
                 changeTheme,
-                saveScene
+                saveScene,
+                addCharacter
             }}
         >
             {props.children}

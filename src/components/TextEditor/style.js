@@ -25,4 +25,4 @@ export const NEW_CHARACTER_FORM_INPUTS = `${TEXTEDITOR_FORM_FIELDS_STYLES} h-ful
 
 export const NEW_CHARACTER_LONG_DESC = `dark:text-white flex justify-between`;
 
-export const CANCEL_BUTTON = `${BUTTON_NEW_CHARACTER_DIALOG} bg-red-500 text-white`;
+export const CANCEL_BUTTON = `col-span-2 bg-red-500 text-white`;

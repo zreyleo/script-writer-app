@@ -2,6 +2,7 @@ import uuid from 'react-uuid';
 
 const firstConfigurationState = {
     turnOnDarkMode: true,
+    form: '',
     name: 'el perdon',
     screenplay: [
         {
@@ -20,14 +21,22 @@ const firstConfigurationState = {
             ]
         }
     ],
-    characters: [
-        {
-            name: '',
-            role: '',
-            shortDescription: '',
-            longDescription: ''
-        }
-    ],
+    characters: [],
+    scene: {
+        slugLine: '',
+        sceneActions: [
+            {
+                sceneDescription: '',
+                diaologues: [
+                    {
+                        character: '',
+                        annotation: '',
+                        line: ''
+                    }
+                ]
+            }
+        ]
+    },
     author: 'Regynald Zambrano'
 };
 

@@ -1,4 +1,4 @@
-import { CHANGE_THEME, SAVE_SCENE } from './actions';
+import { ADD_CHARACTER, CHANGE_THEME, SAVE_SCENE } from './actions';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -12,6 +12,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 screenplay: [...state.screenplay, action.payload.scene]
+            };
+
+        case ADD_CHARACTER:
+            return {
+                ...state,
+                characters: [...state.characters, action.payload.character]
             };
 
         default:
