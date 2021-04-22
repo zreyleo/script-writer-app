@@ -34,10 +34,6 @@ const NewSceneForm = () => {
         event.preventDefault();
     };
 
-    const setNewCharacterForm = () => {
-        setForm('NEW_CHARACTER');
-    };
-
     return (
         <form
             className="TextEditor-form h-full grid grid-cols-6 gap-4"
@@ -45,14 +41,8 @@ const NewSceneForm = () => {
         >
             <SlugLine setSlugLine={setSlugLine} />
             <SceneAction />
-            <button
-                className={`${BUTTON_NEW_CHARACTER_DIALOG}`}
-                onClick={setNewCharacterForm}
-            >
-                NEW CHARACTER
-            </button>
             <button className={`${BUTTON_NEW_CHARACTER_DIALOG}`}>
-                + DIALOG SECUENCE
+                + DIALOGUE SECUENCE
             </button>
             <input
                 type="submit"

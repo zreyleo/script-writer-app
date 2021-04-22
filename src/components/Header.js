@@ -1,6 +1,5 @@
-import ScriptActions from './ScriptActions';
 import HeaderTitle from './HeaderTitle';
-
+import ScriptActions from './ScriptActions';
 import { THEME } from '../styles';
 
 const Header = () => {

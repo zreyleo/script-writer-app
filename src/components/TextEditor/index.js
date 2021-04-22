@@ -15,6 +15,8 @@ const TextEditor = () => {
             <div className="bg-gray-50 dark:bg-gray-900 h-full p-8">
                 {form === 'NEW_CHARACTER' ? (
                     <NewCharacterForm />
+                ) : form === 'NEW_DIALOGUES' ? (
+                    <NewSceneForm />
                 ) : (
                     <NewSceneForm />
                 )}
