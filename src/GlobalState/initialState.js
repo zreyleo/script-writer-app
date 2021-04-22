@@ -41,6 +41,6 @@ const firstConfigurationState = {
 };
 
 const initialState =
-    localStorage.getItem('initialState') || firstConfigurationState;
+    JSON.parse(localStorage.getItem('savedState')) || firstConfigurationState;
 
 export default initialState;
