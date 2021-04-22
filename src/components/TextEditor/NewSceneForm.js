@@ -1,4 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+
+import ScriptContext from '../../GlobalState/context';
+
 import SceneAction from './SceneAction';
 import SlugLine from './SlugLine';
 
@@ -23,7 +26,9 @@ const sceneBody = {
     ]
 };
 
-const NewSceneForm = ({ setForm }) => {
+const NewSceneForm = () => {
+    const { setForm } = useContext(ScriptContext);
+
     const [slugLine, setSlugLine] = useState('');
     const handleSubmit = (event) => {
         event.preventDefault();

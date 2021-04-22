@@ -1,4 +1,4 @@
-import { ADD_CHARACTER, CHANGE_THEME, SAVE_SCENE } from './actions';
+import { ADD_CHARACTER, CHANGE_THEME, SAVE_SCENE, SET_FORM } from './actions';
 
 const reducer = (state, action) => {
     let newState = JSON.parse(JSON.stringify(state));
@@ -21,6 +21,13 @@ const reducer = (state, action) => {
             newState = {
                 ...newState,
                 characters: [...newState.characters, action.payload.character]
+            };
+            break;
+
+        case SET_FORM:
+            newState = {
+                ...newState,
+                form: action.payload.wichForm
             };
             break;
 

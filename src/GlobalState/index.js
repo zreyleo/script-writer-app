@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 
-import { ADD_CHARACTER, CHANGE_THEME, SAVE_SCENE } from './actions';
+import { ADD_CHARACTER, CHANGE_THEME, SAVE_SCENE, SET_FORM } from './actions';
 
 import GlobalStateContext from './context';
 import reducer from './reducer';
@@ -30,13 +30,21 @@ const GlobalState = (props) => {
         });
     };
 
+    const setForm = (wichForm) => {
+        dispatch({
+            type: SET_FORM,
+            payload: { wichForm }
+        });
+    };
+
     return (
         <GlobalStateContext.Provider
             value={{
-                turnOnDarkMode: state.turnOnDarkMode,
+                ...state,
                 changeTheme,
                 saveScene,
-                addCharacter
+                addCharacter,
+                setForm
             }}
         >
             {props.children}

@@ -1,8 +1,6 @@
-import uuid from 'react-uuid';
-
 const firstConfigurationState = {
     turnOnDarkMode: true,
-    form: '',
+    form: 'NEW_SCENE',
     name: 'el perdon',
     screenplay: [
         {

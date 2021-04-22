@@ -7,7 +7,10 @@ import { CANCEL_BUTTON } from './style';
 const CancelButton = () => {
     const { setForm } = useContext(ScriptContext);
     return (
-        <button onClick={() => setForm('')} className={`${CANCEL_BUTTON}`}>
+        <button
+            onClick={() => setForm('NEW_SCENE')}
+            className={`${CANCEL_BUTTON}`}
+        >
             CANCEL
         </button>
     );
