@@ -14,7 +14,7 @@ import {
 import './style.css';
 
 const NewCharacterForm = () => {
-    const { addCharacter } = useContext(ScriptContext);
+    const { addCharacter, setForm } = useContext(ScriptContext);
     const [character, setCharacter] = useState({
         name: '',
         shortDesc: '',
@@ -32,6 +32,7 @@ const NewCharacterForm = () => {
         event.preventDefault();
 
         addCharacter(character);
+        setForm('NEW_SCENE');
     };
 
     return (
